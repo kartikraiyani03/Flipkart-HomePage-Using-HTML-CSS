@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+    
+    <style>
+        *
+        {
+            font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        main 
+        {
+            background-color: rgb(229, 224, 224);
+            height: calc(100vh - 10vh -12vh);
+            width: 100vw;
+            margin: 0px 0px;
+        }
+
+        header 
+        {
+            margin: 0px;
+            display: flex;
+            height: 10vh;
+            width: 100vw;
+            background-color: #2874f0;
+        }
+
+        img 
+        {
+            margin-top: 20px;
+            margin-left: 40px;
+            height: 30px;
+            height: 30px;
+        }
+
+        ul li 
+        {
+            margin-left: 40px;
+            margin-top: 27px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        ul li a 
+        {
+            color: white;
+            text-decoration: none;
+        }
+
+        ul li a:hover 
+        {
+            font-weight: bold;
+        }
+
+        .search 
+        {
+            display: flex;
+            margin: 21px;
+        }
+
+        .search input 
+        {
+            padding-top: 1px;
+            font-size: 15px;
+            height: 29px;
+            width: 440px;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+
+        .search .bt 
+        {
+            margin-left: 15px;
+            margin-top: 2px;
+            height: 30px;
+            width: 55px;
+            border: 2px white solid;
+            border-radius: 5px;
+            background-color: #2874f0;
+            color: white;
+        }
+
+        .account 
+        {
+            display: flex;
+            margin-right: 10px;
+            justify-content: end
+        }
+
+        .account ul li 
+        {
+            color: white;
+        }
+
+        .account ul li a 
+        {
+            font-size: 20px;
+        }
+
+        .big1 
+        {
+            display: flex;
+            margin: 10px 10px;
+            background-color: white;
+            height: 20vh;
+            width: 1220px;
+            padding-left: 100px;
+            padding-right: 200px;
+        }
+        .big1 .items
+        {
+            padding-left: 10px;
+            height: 125px;
+            background-color: white;
+        }
+
+        .big1 p
+        {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 60px;
+            color: black;
+        }
+        .big1 p:hover
+        {
+            color: #2874f0;
+        }
+
+        .big1 img 
+        {
+            height: 79px;
+            margin-left: 50px;
+        }
+        .big1 img:hover
+        {
+            height: 82px;
+        }
+
+        .photo img 
+        {
+            margin: 3px 10px;
+            width: 98vw;
+            height: 260px;
+        }
+        
+        .big2 
+        {
+            padding-right: 100px;
+            padding: 70px 10px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 96vw;
+            background-color: white;
+            margin: 10px 10px;
+        }
+        
+        .big2 .lap 
+        { 
+            padding-right: 40px;
+            background-color: white;
+            width: 250px;
+            height: 380px;
+            padding-left: 5px;
+            border: 2px solid rgb(206, 204, 204);
+            border-radius: 4px;
+            margin: 10px;
+        }
+        .big2 .lap img
+        {
+            height: 200px;
+            width: 180px;
+        }
+        .big2 .lap img:hover
+        {
+            height: 203px;
+            width: 183px;
+            opacity: 0.7;
+        }
+        .big2 .lap a
+        {
+            text-decoration: none;
+            text-align-last: center;
+        }
+        .big2 .lap p
+        {
+            color: black;
+            text-decoration: none;
+            margin-left: 50px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .big2 .lap a .f1
+        {
+            color: green;
+            font-size: 18px;
+            font-weight: bold
+        }
+        .big2 .lap a .rate
+        {
+            margin-left: 113px;
+            margin-top: 1vh;
+            font-weight: bold;
+            height: 25px;
+            width: 40px;
+            color: white;
+            border: 0px solid white;
+            border-radius: 4px;
+            background-color: green;
+        }
+
+        .big3 
+        {
+            padding-right: 100px;
+            padding: 70px 10px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 96vw;
+            background-color: white;
+            margin: 20px 10px;
+        }
+
+        .big3 .mob
+        {
+            padding-right: 40px;
+            background-color: white;
+            width: 250px;
+            height: 390px;
+            padding-left: 5px;
+            border: 2px solid rgb(206, 204, 204);
+            border-radius: 4px;
+            margin: 10px;
+        }
+        .big3 .mob img 
+        {
+            height: 240px;
+            width: 180px;
+        }
+        .big3 .mob img:hover
+        {
+            height: 245px;
+            width: 185px;
+            opacity: 0.8;
+        }
+
+        .big3 .mob p
+        {
+            color: black;
+            text-decoration: none;
+            margin-left: 50px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .big3 .mob a
+        {
+            text-decoration: none;
+            text-align-last: center;
+        }
+
+        .big3 .mob a .g2 
+        {
+            color: green;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .big3 .mob a .rate
+        {
+            margin-left: 8vw;
+            margin-top: 1vh;
+            font-weight: bold;
+            height: 25px;
+            width: 40px;
+            color: white;
+            border: 0px solid white;
+            border-radius: 4px;
+            background-color: green;
+        }
+
+        .big4
+        {
+          margin: 10px 10px;
+          padding: 0px 0px;
+          height: 650px;
+          width: 97vw;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          border-radius: 5px;
+        }
+        .big4 .add
+        {
+            height: 300px;
+            width: 430px;
+            background-color: white;
+            display: inline-block;
+            margin: 10px;
+            margin-bottom: 20px;
+            
+        }
+        .big4 .add img
+        {
+            margin: 0px;
+            width: 497px;
+            height: 300px;
+        }
+        .big4 .add img:hover
+        {
+            opacity: 0.8;
+        }
+
+        footer 
+        {
+            height: 15vh;
+            width: 100vw;
+            margin-top: 100px;
+            display: flex;
+            color: white;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+        }
+        footer ul 
+        {
+
+            padding-left: 40px;
+            align-items: start;
+        }
+    </style>
+
+
+    <header>
+        <div class="logo">
+            <img src="flipkart.png" alt="photo">
+        </div>
+
+        <ul>
+            <li><a href="www.google.com">Home</a></li>
+            <li><a href="www.google.com">About</a></li>
+            <li><a href="www.google.com">Conract</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button class="bt">Search</button>
+        </div>
+        
+        <div class="account">
+            <ul>
+                <li><a href="www.google.com">Become A Seller</a></li>
+                <li><a href="www.google.com">My Account</a></li>
+                <li><a href="www.google.com">Cart</a></li>
+            </ul>
+        </div>
+        
+    </header>
+    
+    <main>
+        <div class="big1">
+            <div class="items"> <a href="www.google.com"> <img src="1.webp" alt="photo"><p>Grocery</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="2.webp" alt="photo"><p>Mobile</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="3.webp" alt="photo"><p>Fashion</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="4.webp" alt="photo"><p>Electronics</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="5.webp" alt="photo"><p>Furniture</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="6.webp" alt="photo"><p>Application</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="7.webp" alt="photo"><p>Travel</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="8.webp" alt="photo"><p>Beauty,Toys and More</p></a></div> 
+            <div class="items"> <a href="www.google.com"> <img src="9.webp" alt="photo"><p>Twu Wheeler</p></a></div> 
+        </div>
+        
+        <div class="photo">
+            <img src="photo.webp" alt="">
+        </div>
+        
+        <div class="big2">
+            <div class="lap"><a href="www.google.com"><img src="f1.webp" alt=""><p> Chromebook Celeron Dual Core - (4 GB/64 GB EMMC Storage</p><p class="f1">incl off offer</p><button class="rate">4.4 ★</button></a></div>
+            <div class="lap"><a href="www.google.com"><img src="f2.webp" alt=""><p> Chromebook Celeron Dual Core - (4 GB/64 GB EMMC Storage</p><p class="f1">incl off offer</p><button class="rate">4.2 ★</button></a></div>
+            <div class="lap"><a href="www.google.com"><img src="f3.webp" alt=""><p> Chromebook Celeron Dual Core - (4 GB/64 GB EMMC Storage</p><p class="f1">incl off offer</p><button class="rate">4.8 ★</button></a></div>
+            <div class="lap"><a href="www.google.com"><img src="f4.webp" alt=""><p> Chromebook Celeron Dual Core - (4 GB/64 GB EMMC Storage</p><p class="f1">incl off offer</p><button class="rate">4. 9★</button></a></div>
+            <div class="lap"><a href="www.google.com"><img src="f5.webp" alt=""><p> Chromebook Celeron Dual Core - (4 GB/64 GB EMMC Storage</p><p class="f1">incl off offer</p><button class="rate">3.4 ★</button></a></div>
+            
+        </div>
+        
+        <div class="big3">
+           <div class="mob"><a href="www.google.com"><img src="g1.webp" alt=""><p>Samsung Galaxy A54 5G </p> <p class="g2">incl off offer</p><button class="rate">4.4 ★</button></a></div>
+           <div class="mob"><a href="www.google.com"><img src="g2.webp" alt=""><p>Samsung Galaxy A54 5G </p> <p class="g2">incl off offer</p><button class="rate">4.9 ★</button></a></div>
+           <div class="mob"><a href="www.google.com"><img src="g3.webp" alt=""><p>Samsung Galaxy A54 5G </p> <p class="g2">incl off offer</p><button class="rate">3.4 ★</button></a></div>
+           <div class="mob"><a href="www.google.com"><img src="g4.webp" alt=""><p>Samsung Galaxy A54 5G </p> <p class="g2">incl off offer</p><button class="rate">4.7 ★</button></a></div>
+           <div class="mob"><a href="www.google.com"><img src="g5.webp" alt=""><p>Samsung Galaxy A54 5G </p> <p class="g2">incl off offer</p><button class="rate">4.8 ★</button></a></div>
+          
+        </div>
+
+        <div class="big4">
+            <div class="add"><a href="www.google.com"><img src="h1.webp" alt="photo"></a></div>
+            <div class="add"><a href="www.google.com"><img src="h2.webp" alt="photo"></a></div>
+            <div class="add"><a href="www.google.com"><img src="h3.webp" alt="photo"></a></div>
+            <div class="add"><a href="www.google.com"><img src="h4.webp" alt="photo"></a></div>
+            <div class="add"><a href="www.google.com"><img src="h5.webp" alt="photo"></a></div>
+            <div class="add"><a href="www.google.com"><img src="h6.webp" alt="photo"></a></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy All Right Reserved</p>
+        <!-- <div class="f">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Reach Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </div> -->
+    </footer>
+
+</body>
+
+</html>
